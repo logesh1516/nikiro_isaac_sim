@@ -14,7 +14,7 @@ def generate_launch_description():
         "map",
         default=os.path.join(
             get_package_share_directory(
-                "nikiro_navigation"), "maps", "map.yaml"
+                "nikiro_navigation"), "maps", "map_1765654051.yaml"
         ),
     )
     param_dir = LaunchConfiguration(
