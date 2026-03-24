@@ -98,10 +98,6 @@ Once the bridge is live:
 - **SLAM Mapping** — build and localize against maps in real-time
 - **Nav2 Path Planning** — full autonomous navigation with dynamic obstacle avoidance
 
-### Manipulation
-- **Robot Arm Control** — myCobot integrated for pick-and-place
-- **Conveyor Systems** — industrial workflow simulation
-- **Grasping** — physics-accurate contact and gripper interaction
 
 ### AI & Training Workflows
 - **Reinforcement Learning** — train navigation/manipulation policies via Isaac Lab
@@ -134,7 +130,7 @@ Nikiro spans three interconnected repositories:
 │  🧪 Nikiro_simulation   →  ROS2 + Gazebo + Nav2    │
 │  🐳 Nikiro_docker       →  Containerized Deploy    │
 │  🟢 Nikiro_isaac_sim    →  GPU Sim + AI Training   │
-│              (you are here)                         │
+│                     
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -148,7 +144,7 @@ Nikiro spans three interconnected repositories:
 
 <div align="center">
 
-Built with 🟢 NVIDIA Isaac Sim + 🤖 ROS 2 by **Logesh**  
+Built with 🟢 NVIDIA Isaac Sim + 🤖 ROS 2 by **Logesh S (Loki)**
 *Because real robots deserve real physics.*
 
 </div>
