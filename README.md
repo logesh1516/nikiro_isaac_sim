@@ -1,99 +1,142 @@
-# Nikiro Isaac Sim
+<div align="center">
 
-This repository contains NVIDIA Isaac Sim (USD) files for the Nikiro project - an autonomous mobile robot (AMR) platform designed for indoor navigation and manipulation tasks.
+```
+███╗   ██╗██╗██╗  ██╗██╗██████╗  ██████╗ 
+████╗  ██║██║██║ ██╔╝██║██╔══██╗██╔═══██╗
+██╔██╗ ██║██║█████╔╝ ██║██████╔╝██║   ██║
+██║╚██╗██║██║██╔═██╗ ██║██╔══██╗██║   ██║
+██║ ╚████║██║██║  ██╗██║██║  ██║╚██████╔╝
+╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝ ╚═════╝
+         × NVIDIA ISAAC SIM
+```
 
-## Overview
+### **Physics-Accurate AMR Simulation on NVIDIA Omniverse**
+*USD · RTX Rendering · GPU Physics · ROS 2 Bridge · AI-Ready*
 
-Nikiro Isaac Sim provides the simulation environment and USD scene files needed to simulate the Nikiro robot platform within NVIDIA Isaac Sim. This enables physics-accurate simulation, sensor testing, and AI training workflows before deploying to real hardware.
+[![Isaac Sim](https://img.shields.io/badge/NVIDIA-Isaac%20Sim-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](https://developer.nvidia.com/isaac-sim)
+[![Omniverse](https://img.shields.io/badge/Omniverse-Platform-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](https://www.nvidia.com/en-us/omniverse/)
+[![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?style=for-the-badge&logo=ros)](https://docs.ros.org/en/humble/)
+[![USD](https://img.shields.io/badge/Format-USD-lightgrey?style=for-the-badge)](https://openusd.org/)
 
-## About Nikiro
+</div>
 
-Nikiro is a ROS 2-based Autonomous Mobile Robot (AMR) platform designed for indoor navigation using a differential drive system. The platform integrates:
+---
 
-- **SLAM (Simultaneous Localization and Mapping)**: Real-time environmental mapping and localization
-- **Nav2 Navigation Stack**: Dynamic path planning and intelligent obstacle avoidance
-- **Robot Manipulation**: Integration with robotic arms (like myCobot) for pick-and-place tasks
-- **Industrial Workflows**: Support for conveyor systems and warehouse automation
+## 🧠 Why Isaac Sim?
 
-For the complete ROS 2 simulation package, see the main [Nikiro Simulation repository](https://github.com/logesh1516/Nikiro_simulation).
+Gazebo is great. Isaac Sim is a **different league**.
 
-## What is Isaac Sim?
+Nikiro's Isaac Sim integration brings **GPU-accelerated physics**, **RTX-quality sensor simulation**, and **AI training pipelines** to the same robot platform — letting you validate algorithms, generate synthetic datasets, and train real policies before a single wheel turns on real hardware.
 
-NVIDIA Isaac Sim™ is a robotics simulation platform built on NVIDIA Omniverse that provides:
+> 🎯 **The goal:** Close the sim-to-real gap so tight it almost disappears.
 
-- **GPU-Accelerated Physics**: High-fidelity physics simulation powered by NVIDIA PhysX
-- **RTX Rendering**: Physically accurate sensor simulation (cameras, LiDAR, etc.)
-- **Robot Import**: Support for URDF, MJCF, and CAD formats
-- **AI Training**: Integration with Isaac Lab for reinforcement learning
-- **ROS Integration**: Seamless connection with ROS/ROS2 workflows
-- **Synthetic Data Generation**: Tools for creating training datasets
+---
 
-## Repository Contents
+## ✨ What Makes This Special
 
-This repository includes:
+| Capability | Powered By |
+|------------|------------|
+| ⚡ GPU-Accelerated Physics | NVIDIA PhysX |
+| 📷 Photorealistic Sensor Sim | RTX Ray Tracing |
+| 🗺️ SLAM + Localization | Nav2 + ROS 2 Bridge |
+| 🤖 AI Policy Training | Isaac Lab (RL / IL) |
+| 🏭 Industrial Workflows | Conveyor + Manipulation |
+| 📦 Synthetic Data Gen | Omniverse Replicator |
+| 🔁 Sim-to-Real Transfer | Validated USD → Hardware |
+
+---
+
+## 📁 Repository Structure
 
 ```
 nikiro_isaac_sim/
-└── src/
-    └── USD scene files and assets for Nikiro robot simulation
+├── src/
+│   ├── robot/              # Nikiro USD robot model files
+│   ├── environments/       # World & warehouse scene USDs
+│   └── sensors/            # LiDAR, camera, IMU configs
+└── README.md
 ```
-## Usage
 
-### Loading Nikiro in Isaac Sim
+---
 
-1. **Launch Isaac Sim**:
-   ```bash
-   # If installed via pip
-   isaacsim
-   
-   # Or from binary installation
-   cd isaacsim
-   ./isaac-sim.sh
-   ```
+## 🚀 Getting Started
 
-2. **Open the Nikiro Scene**:
-   - Navigate to `File > Open`
-   - Browse to the `src/` directory in this repository
-   - Select the main Nikiro USD scene file
+### Step 1 — Launch Isaac Sim
 
-3. **Run Simulation**:
-   - Click the "Play" button in the toolbar
-   - Use the Isaac Sim controls to interact with the simulation
-
-3. **ROS2 Bridge**:
 ```bash
-    ros2 launch nikiro_navigation nikiro_navigation.launch.py
-```
-- Pose estimate the Robot.
-- Give the location to navigate
+# Via pip install
+isaacsim
 
-## Features
-
-### Simulated Capabilities
-
-- **Differential Drive Navigation**: Test navigation algorithms in realistic physics
-- **Sensor Simulation**: LiDAR, cameras, IMU, and contact sensors
-- **SLAM Mapping**: Real-time map building and localization testing
-- **Path Planning**: Nav2 integration for autonomous navigation
-- **Manipulation**: Robot arm control and pick-and-place operations
-- **Multi-Robot Scenarios**: Test fleet coordination and interaction
-
-### Training Workflows
-
-- **Reinforcement Learning**: Train navigation and manipulation policies
-- **Imitation Learning**: Learn from demonstrations
-- **Synthetic Data Generation**: Create training datasets for perception models
-- **Sim-to-Real Transfer**: Validate algorithms before hardware deployment
-
-## Project Structure
-
-```
-nikiro_isaac_sim/
-├── src/                    # USD scene files and assets
-│   ├── robot/             # Robot model USD files
-│   ├── environments/      # Environment/world USD files
-│   └── sensors/           # Sensor configuration files
-└── README.md              # This file
+# Via binary installation
+cd isaacsim && ./isaac-sim.sh
 ```
 
-**Note**: This repository contains the Isaac Sim USD files. For the complete ROS 2 simulation environment, visit the [Nikiro Simulation repository](https://github.com/logesh1516/Nikiro_simulation).
+### Step 2 — Open the Nikiro Scene
+
+1. Go to **File → Open**
+2. Navigate to the `src/` directory in this repo
+3. Select the main Nikiro `.usd` scene file
+4. Hit **▶ Play** in the toolbar
+
+### Step 3 — Connect ROS 2 Bridge
+
+```bash
+ros2 launch nikiro_navigation nikiro_navigation.launch.py
+```
+
+Once the bridge is live:
+- 📍 **Set an initial pose estimate** in RViz2
+- 🎯 **Send a Nav2 goal** — watch Nikiro plan and navigate in real-time
+
+---
+
+## 🎮 Simulated Capabilities
+
+### Navigation & Perception
+- **Differential Drive** — test kinematics and odometry under realistic physics
+- **LiDAR / Camera / IMU** — RTX-rendered sensor data, no approximations
+- **SLAM Mapping** — build and localize against maps in real-time
+- **Nav2 Path Planning** — full autonomous navigation with dynamic obstacle avoidance
+
+### Manipulation
+- **Robot Arm Control** — myCobot integrated for pick-and-place
+- **Conveyor Systems** — industrial workflow simulation
+- **Grasping** — physics-accurate contact and gripper interaction
+
+### AI & Training Workflows
+- **Reinforcement Learning** — train navigation/manipulation policies via Isaac Lab
+- **Imitation Learning** — record and replay demonstrations
+- **Synthetic Data Generation** — build perception training datasets at scale
+- **Sim-to-Real Validation** — stress-test before any hardware deployment
+
+---
+
+## 🌐 The Nikiro Ecosystem
+
+Nikiro spans three interconnected repositories:
+
+```
+┌─────────────────────────────────────────────────────┐
+│                  NIKIRO ECOSYSTEM                   │
+│                                                     │
+│  🧪 Nikiro_simulation   →  ROS2 + Gazebo + Nav2    │
+│  🐳 Nikiro_docker       →  Containerized Deploy    │
+│  🟢 Nikiro_isaac_sim    →  GPU Sim + AI Training   │
+│              (you are here)                         │
+└─────────────────────────────────────────────────────┘
+```
+
+| Repo | Purpose | Link |
+|------|---------|------|
+| **Nikiro_simulation** | Full ROS 2 sim with SLAM, conveyor & arm | [→ View](https://github.com/logesh1516/Nikiro_simulation) |
+| **Nikiro_docker** | One-command containerized deployment | [→ View](https://github.com/logesh1516/Nikiro_docker) |
+| **Nikiro_isaac_sim** | NVIDIA Isaac Sim USD scenes & AI workflows | *you're here* |
+
+---
+
+<div align="center">
+
+Built with 🟢 NVIDIA Isaac Sim + 🤖 ROS 2 by **Logesh**  
+*Because real robots deserve real physics.*
+
+</div>
