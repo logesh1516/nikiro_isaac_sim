@@ -111,6 +111,18 @@ Once the bridge is live:
 
 ---
 
+## 📸 Simulation Preview
+
+<div align="center">
+
+| Isaac Sim Scene | Action Graph |
+|:-:|:-:|
+| ![Nikiro Isaac Sim Scene](https://raw.githubusercontent.com/logesh1516/nikiro_isaac_sim/ad7bf43bc10e9c9774a069e0233d69cbe3d79608/src/usd/scene.png) | ![Action Graph](https://raw.githubusercontent.com/logesh1516/nikiro_isaac_sim/ad7bf43bc10e9c9774a069e0233d69cbe3d79608/src/usd/action_graph.png) |
+
+</div>
+
+---
+
 ## 🌐 The Nikiro Ecosystem
 
 Nikiro spans three interconnected repositories:
